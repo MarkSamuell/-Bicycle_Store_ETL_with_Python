@@ -1,0 +1,29 @@
+-- Create the orders table
+CREATE TABLE general.orders (
+    order_id INT PRIMARY KEY,
+    customer_id INT,
+    order_status INT,
+    order_date VARCHAR(100),
+    required_date VARCHAR(100),
+    shipped_date VARCHAR(100),
+    store_id INT,
+    staff_id INT
+);
+
+-- Create the order_items table
+CREATE TABLE general.order_items (
+    order_id INT,
+    item_id VARCHAR(100),
+    product_id INT,
+    quantity INT,
+    list_price NUMERIC(10, 2),
+    discount NUMERIC(4, 2)
+);
+
+-- Load data into the orders table from CSV
+COPY general.orders(order_id, customer_id, order_status, order_date, required_date, shipped_date, store_id, staff_id)
+FROM '/tmp/orders.csv' DELIMITER ',' CSV HEADER;
+
+-- Load data into the order_items table from CSV
+COPY general.order_items(order_id, item_id, product_id, quantity, list_price, discount)
+FROM '/tmp/order_items.csv' DELIMITER ',' CSV HEADER;
