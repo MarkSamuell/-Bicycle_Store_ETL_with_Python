@@ -29,7 +29,7 @@ The goal of this project is to design and implement an end-to-end Extract, Trans
 
 ### Stage 5: Data Modeling and Visualization 
 - **Data Merging:** Integrate orders, items, and product details into a unified dataset for deeper analysis. [notebooks](https://github.com/MarkSamuell/Bicycle_Store_ETL_with_Python/tree/main/Modeling)
-- **Visualization Creation:** Develop at least three types of visualizations to illustrate key metrics and trends. [notebooks](https://github.com/MarkSamuell/Bicycle_Store_ETL_with_Python/tree/main/Visuals)
+- **Visualization Creation:** Develop at least three types of visualizations to illustrate key metrics and trends. [notebooks](https://github.com/MarkSamuell/Bicycle_Store_ETL_with_Python/tree/main/Visualization)
 - **Documentation:** Document the modeling techniques and visualization choices.
 - **Result Compilation:** Organize final datasets and visualizations in 'Information Mart' and 'Visualization' folders respectively.
 
