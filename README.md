@@ -8,28 +8,28 @@ The goal of this project is to design and implement an end-to-end Extract, Trans
 - **Database Creation:** Initialize a PostgreSQL database with schemas and tables for storing order and item data.
 - **Data Lake Configuration:** Set up folders within a cloud storage solution to store additional data such as CSV files from different departments.
 
-### Stage 2: Data Extraction
+### Stage 2: Data Extraction [notebooks](https://github.com/MarkSamuell/Bicycle_Store_ETL_with_Python/tree/main/Extraction)
 - **Database Extraction:** Extract data from PostgreSQL using custom SQL queries.
 - **Data Lake Extraction:** Read files from the data lake folder structure.
 - **API Integration:** Fetch real-time exchange rates and store them in the landing folder.
 - **Data Consolidation:** Combine all extracted data into a single CSV file per dataset, enrich them with metadata like extraction timestamp and data source.
 
-### Stage 3: Data Quality Checks
+### Stage 3: Data Quality Checks [notebooks](https://github.com/MarkSamuell/Bicycle_Store_ETL_with_Python/tree/main/DQcheck)
 - **Null Checks:** Identify and handle null values in essential fields.
 - **Duplicate Checks:** Detect and remove duplicate rows.
 - **Data Validation:** Ensure data types and values are within expected ranges (e.g., price ranges, date limits).
 - **Preparation for Staging:** Store cleaned and validated data in 'staging_1' folder for transformation.
 
-### Stage 4: Data Transformation
+### Stage 4: Data Transformation [notebooks](https://github.com/MarkSamuell/Bicycle_Store_ETL_with_Python/tree/main/Transformation)
 - **Currency Conversion:** Merge latest currency exchange rates to calculate local prices.
 - **Delivery Metrics:** Add columns to track delivery performance, such as late deliveries and latency days.
 - **Locality Flag:** Determine if customers are local based on proximity to stores.
 - **Lookup Tables:** Resolve ambiguous columns by creating and utilizing lookup tables for order statuses.
 - **Transformed Data Staging:** Output transformed data to 'staging_2' for further processing.
 
-### Stage 5: Data Modeling and Visualization
-- **Data Merging:** Integrate orders, items, and product details into a unified dataset for deeper analysis.
-- **Visualization Creation:** Develop at least three types of visualizations to illustrate key metrics and trends.
+### Stage 5: Data Modeling and Visualization 
+- **Data Merging:** Integrate orders, items, and product details into a unified dataset for deeper analysis. [notebooks](https://github.com/MarkSamuell/Bicycle_Store_ETL_with_Python/tree/main/Modeling)
+- **Visualization Creation:** Develop at least three types of visualizations to illustrate key metrics and trends. [notebooks](https://github.com/MarkSamuell/Bicycle_Store_ETL_with_Python/tree/main/Visuals)
 - **Documentation:** Document the modeling techniques and visualization choices.
 - **Result Compilation:** Organize final datasets and visualizations in 'Information Mart' and 'Visualization' folders respectively.
 
